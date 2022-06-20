@@ -57,4 +57,16 @@ context('Actions', () => {
         cy.contains('Save').click()
         cy.wait(2000)
     })
+    it('Should set primary language',function(){
+        cy.contains('Languages').should('exist')
+        .click()
+        cy.url().should('eq','https://www.telusinternational.ai/cmp/contributor/userprofile/languages')
+        cy.wait(2000)
+        cy.get('.col-auto > .row').click()
+        cy.xpath('//div[@id="edit-language-form"]//div[contains(text(),"Language*")]//parent::div//parent::div//div[contains(@class, "sui-c-input-dropdown__indicators")]').type('English (Gambia)')
+        cy.xpath('//div[@id="edit-language-form"]//div[contains(text(),"Language*")]//parent::div//parent::div//div[contains(@class, "sui-c-input-dropdown__indicators")]').type('{enter}')
+        cy.wait(2000)
+
+    })
+
 })
