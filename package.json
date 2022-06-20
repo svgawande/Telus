@@ -1,0 +1,16 @@
+{
+  "name": "telustest",
+  "version": "1.0.0",
+  "description": "tell us qa eng test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sachin",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
+    "cypress": "^10.1.0",
+    "cypress-xpath": "^1.6.2"
+  }
+}
